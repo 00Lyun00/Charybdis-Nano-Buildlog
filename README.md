@@ -1,2 +1,2 @@
 # Charybdis-Nano-MW
-My rendition of the Charybdis Nano split keyboard
+This is my rendition of the Charybdis Nano split keyboard made by BastardKB.
