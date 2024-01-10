@@ -17,4 +17,11 @@ Thank you to BastardKB for providing the base hardware and software, ufan for de
 ## Electronics    
 - MCU: nice!nano 2.0
 - Trackball Sensor: ufan's original PMW3610 breakboard
-- Display: nice!view
+- Display: nice!view  
+   
+
+
+The Ogre zinc alloy keycaps are roughly $48 for 72 caps, making them far cheaper than aluminum or stainless steel keycaps.  
+However, as zinc alloy keycaps are notoriously subseptible to discoloration, I might have to replace them after a couple months or years later.  
+<Photo>  
+I've installed the R4 keycaps upside down in row one and R2 and R3 keycaps in rows two and three, thus creating a somewhat palatable keywell structure. It would have been better to use other keycaps, but as these were the only metal keycaps I were willing to afford, I had to make use of what I could.
