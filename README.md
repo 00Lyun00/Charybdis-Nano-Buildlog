@@ -22,4 +22,9 @@ Everything has been hand-wired, although I deeply regret this decision and would
 The Ogre zinc alloy keycaps are roughly $48 for 72 caps, making them far cheaper than aluminum or stainless steel keycaps.  
 However, as zinc alloy keycaps are notoriously subseptible to discoloration, I might have to replace them after a couple months or years later.  
 <Photo>  
-I've installed the R4 keycaps upside down in row one and R2 and R3 keycaps in rows two and three, thus creating a somewhat palatable keywell structure. It would have been better to use other keycaps, but as these were the only metal keycaps I were willing to afford, I had to make use of what I could.
+I've installed the R4 keycaps upside down in row one and R2 and R3 keycaps in rows two and three, thus creating a somewhat palatable keywell structure. It would have been better to use other keycaps, but as these were the only metal keycaps I were willing to afford, I had to make use of what I could.  
+
+
+(actual pinout photo)  
+  This is my pinout, and the trackball/nice!view sck/mosi/cs pins each can be interchanged with their corresponding positions. Due to trial and error and miswriting pin numbers, I have resulted in the above mess, but I would rather use the pinout below for easier wiring.  
+  (Desired pinout photo)  
