@@ -38,7 +38,7 @@ The final product turned out a bit too bright and red than I intended, but it wa
 
 ## Wiring and Electronics
 
-As I was handwiring this keyboard, that meant I couldn't just install the firmware and had to figure out which wires were connected to which pin on the MCU. So I dug up VOID's zmk folder to find out how everything was wired.  
+As I have little to no knowledge about electronics, and all I am doing is guesswork based on pre-existing builds. This acted as a major obstacle for handwiring this keyboard as it meant I couldn't just install the firmware and had to figure out which wires were connected to which pin on the MCU. So I dug up VOID's zmk folder to find out how everything had to be wired.  
 (photo of row2col and row pinout and such)
 Based on -insert file name-, I found three keywords: row2col, pins, and pins.  
 
@@ -50,9 +50,18 @@ Both the row pins and column pins indicated told me where each row and column mu
 
 I did the same thing with the trackball sensor, and I organized everything into this neat image file so I could just solder the wires without going through every single document.  
 
+(trackball sensor positioning)  
+I used ufan's original pmw-3610 breakboard opposed to the Charybdis pmw-3610 breakboard because it was smaller, and since I am forced to buy 5 of these at least when ordered from JLCPCB, I planned to use the leftover ones for different keyboard projects.  
+However, this meant the pmw-3610 doesn't have a way to be positioned correctly, so I had to change VOID's trackball sensor adapter to hold the pmw-3610 in place. I have failed in fine-tuning the position, and I worked around this problem by adjusting how tightly the bottom screws are turned.   
+The trackball position must be in the exact configuration shown in the photo to work with my settings, and I strongly recommend using the Charybdis breakboard as it is very finicky to work and hard to callibrate.  
+
 (nice!view malfunctuoning)  
 
-Nobody by far wired a nice!view to a keyboard with a pointing device, so I didn't know how their SPIs would interact, let alone what an SPI even is. If you didn't know by now, I have little to no knowledge about electronics, and all I am doing is guesswork based on pre-existing builds.
+Nobody by far wired a nice!view to a keyboard with a pointing device, so I didn't know how their SPIs would interact, let alone what an SPI even is. 
+I added -corresponding lines- to make the nice!view work as a native shield, and as result the nice!view started malfunctioning as shown in the photo.  
+I believe this happenend because both the nice!view and trackball's irpt, sck, mosi pins were wired to the same MCU pins, and they were both set to use spi0. It seemed that whatever signals sent by the trackball interferred with the nice!view.  
+To solve this issue, I set the trackball to use spi3, wired the trackball and nice!view to different pins, and everything worked flawlessly.  I suspect that maybe the problem was only the two devices being wired to the same pins and using the same spi might not have affected the interference, but I was fed up with desoldering and resoldering everything at this point and wasn't willing to verify if that was the case.  
+
 
 The Ogre zinc alloy keycaps are roughly $48 for 72 caps, making them far cheaper than aluminum or stainless steel keycaps.  
 However, as zinc alloy keycaps are notoriously subseptible to discoloration, I might have to replace them after a couple months or years later.  
