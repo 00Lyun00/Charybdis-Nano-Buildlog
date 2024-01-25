@@ -11,13 +11,14 @@ With these challenges in mind, I proceeded to the building process.
 
 
 ## Modeling
-(Photo of multiple nice!view variations)  
+(Photo of model case shot in front)  
 I have practically no knowledge in Fusion360, but as the changes I was about to make were minimal, it fortunately didn't deter the process too much.  
 Firstly, I just simply added two holes on the side for the button switch and covered up the TRRS hole on the case. I also changed the MCU holder for handwiring so that it didn't hold the TRRS conenector, grabbed on millmax hotswap sockets, and used a 3x6 button switch. 
 (tent 3d model)
 For the tents, I just had to make some holes, and for the keyboard cases, I just had to make a hole for the button switch and a holder for the nice!view.  
 Everything except for the nice!view part was easy, as there was nothing to hold the nice!view.  
 So I followed BastardKB's original Charybdis design video(put link) to make some walls on the side the exact way he did, and then I made a rectangular hole big enough to fit the nice!view flush.  
+(Photo of multiple nice!view variations)  
 If I had expertise in Fusion360, I would have added a latch or any other mechanism to hold the nice!view in place. However, as I was limited by the fact that I don't know what I am doing, I simply stopped and decided to glue it in place.  
 
 
@@ -37,16 +38,17 @@ Once the cases and tents were ready, I stained them with three coats of some gen
 The final product turned out a bit too bright and red than I intended, but it was acceptable so I moved on.  
 
 ## Wiring and Electronics
-
-As I have little to no knowledge about electronics, and all I am doing is guesswork based on pre-existing builds. This acted as a major obstacle for handwiring this keyboard as it meant I couldn't just install the firmware and had to figure out which wires were connected to which pin on the MCU. So I dug up VOID's zmk folder to find out how everything had to be wired.  
+(Photo of handwired keyboard)  
+I hand-wired the keyboard because I already had everything I needed to build the keyboard, and I didn't feel the need to order flexible PCBs. I deeply regret this decision as the inner height of the Charybdis Nano is so low that the wire could touch the metal plate and potentially cause shorts. Due to this reason, I strongly recommend using flexible PCBs if you were to build a Charybdis Nano yourself.  
+As I have little to no knowledge about electronics, and all I am doing is guesswork based on pre-existing builds. This acted as a major obstacle for handwiring this keyboard as it meant I couldn't just install the firmware and had to figure out which wires were connected to which pin on the MCU. This is another reason why you should use flexible PCBs alongside BastardKB's Elite-C holder or splinktegrated, as everything is pre-positioned. So I dug up VOID's zmk folder to find out how everything had to be wired.  
 (photo of row2col and row pinout and such)
 Based on -insert file name-, I found three keywords: row2col, pins, and pins.  
 
 (photo of keyboard matrix)  
 row2col : This meant electricity flowed from rows to columns for keyboard scanning. It is very important to know this detail, as this indicates which direction we must wire the diodes so that we ensure the electricity doesn't flow the other way around.  
 Both the row pins and column pins indicated told me where each row and column must be wired to, so I just had to connect the wires accordingly.  
-
-(photo of my pinout)  
+(actual pinout photo)  
+  This is my pinout, and the trackball/nice!view sck/mosi/cs pins each can be interchanged with their corresponding positions. Due to trial and error and miswriting pin numbers, I have resulted in the above mess, but I would rather use the pinout below for easier wiring. Only the VCC, GRD, 
 
 I did the same thing with the trackball sensor, and I organized everything into this neat image file so I could just solder the wires without going through every single document.  
 
@@ -60,15 +62,14 @@ The trackball position must be in the exact configuration shown in the photo to 
 Nobody by far wired a nice!view to a keyboard with a pointing device, so I didn't know how their SPIs would interact, let alone what an SPI even is. 
 I added -corresponding lines- to make the nice!view work as a native shield, and as result the nice!view started malfunctioning as shown in the photo.  
 I believe this happenend because both the nice!view and trackball's irpt, sck, mosi pins were wired to the same MCU pins, and they were both set to use spi0. It seemed that whatever signals sent by the trackball interferred with the nice!view.  
-To solve this issue, I set the trackball to use spi3, wired the trackball and nice!view to different pins, and everything worked flawlessly.  I suspect that maybe the problem was only the two devices being wired to the same pins and using the same spi might not have affected the interference, but I was fed up with desoldering and resoldering everything at this point and wasn't willing to verify if that was the case.  
+To solve this issue, I set the trackball to use spi3, wired the trackball and nice!view to different pins, and everything worked flawlessly.  
+I suspect that maybe the problem was only the two devices being wired to the same pins and using the same spi might not have affected the interference, but I was fed up with desoldering and resoldering everything at this point and wasn't willing to verify if that was the case.  
 
 
-The Ogre zinc alloy keycaps are roughly $48 for 72 caps, making them far cheaper than aluminum or stainless steel keycaps.  
-However, as zinc alloy keycaps are notoriously subseptible to discoloration, I might have to replace them after a couple months or years later.  
+## Final Stretch
+With the keyboard now functioning properly, I just had to get keyswitches and keycaps to finish the build.  
+I got gazzew Boba U4 keyswitches as I prefer having no noise, and I got a set of Ogre zinc alloy keycaps to further push the metal-wood aesthetics.  
+The Ogre keycaps are sold in Korea for roughly $48 for 72 caps, making them far more affordable than aluminum or stainless steel keycaps. However, as zinc alloy keycaps are notoriously subseptible to discoloration, I might have to replace them after a couple months or years later.  
 <Photo>  
-I've installed the R4 keycaps upside down in row one and R2 and R3 keycaps in rows two and three, thus creating a somewhat palatable keywell structure. It would have been better to use other keycaps, but as these were the only metal keycaps I were willing to afford, I had to make use of what I could.  
+I've installed the R4 keycaps upside down in row one and R2 and R3 keycaps in rows two and three, thus creating a somewhat keywell structure. It would have been better to use other keycaps, but as these were the only metal keycaps I were willing to afford, I had to make use of what I could.  
 
-
-(actual pinout photo)  
-  This is my pinout, and the trackball/nice!view sck/mosi/cs pins each can be interchanged with their corresponding positions. Due to trial and error and miswriting pin numbers, I have resulted in the above mess, but I would rather use the pinout below for easier wiring.  
-  (Desired pinout photo)  
