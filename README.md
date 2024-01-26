@@ -14,7 +14,9 @@ You can see a detailed buildlog in the Buildlog folder.
 - Case: CooBean Wood PLA Filament, sanded, stained with generic mahogani wood stain and varnish
 - Switches: Gazzew Boba U4
 - Keycaps: Ogre Zinc Alloy OEM Keycaps (Korean Local Seller)
-- Plates: Laserboost Galvanized Steel Plates  
+- Plates: Laserboost Galvanized Steel Plates
+- Chair Attachment: Ulanzi R094 Magic Arm & Clamp + Magsafe Adapters
+  
 ## Electronics    
 - MCU: nice!nano 2.0
 - Trackball Sensor: [ufan's original PMW3610 breakboard](https://github.com/ufan/pmw3610_breakout)
