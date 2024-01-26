@@ -18,7 +18,7 @@ Firstly, I just simply added two holes on the side for the button switch and cov
 For the tents, I just had to make some holes, and for the keyboard cases, I just had to make a hole for the button switch and a holder for the nice!view.  
 Everything except for the nice!view part was easy, as there was nothing to hold the nice!view.  
 So I followed BastardKB's original Charybdis design video(put link) to make some walls on the side the exact way he did, and then I made a rectangular hole big enough to fit the nice!view flush.  
-![Multiple nice!view hole variations that show my inexpertise](Images/14.jpg)  
+![Multiple nice!view hole variations that show my inexpertise]([Images/14.jpg](https://raw.githubusercontent.com/00Lyun00/Charybdis-Nano-Buildlog/main/Images/14.jpg)  
 If I was better in using Fusion360, I would have added a latch or any other mechanism to hold the nice!view in place. However, as I was limited by the fact that I don't know what I am doing, I simply stopped and decided to glue it in place.  
 
 
