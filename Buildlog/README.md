@@ -57,19 +57,30 @@ I used ufan's original pmw-3610 breakboard opposed to the Charybdis pmw-3610 bre
 However, this meant the pmw-3610 doesn't have a way to be positioned correctly, so I had to change VOID's trackball sensor adapter to hold the pmw-3610 in place. I have failed in fine-tuning the position, and I worked around this problem by adjusting how tightly the bottom screws are turned.   
 The trackball position must be in the exact configuration shown in the photo to work with my settings, and I strongly recommend using the Charybdis breakboard as it is very finicky to work and hard to callibrate.  
 
-(nice!view malfunctuoning)  
+(photo of nice!view malfunctuoning)  
 
 Nobody by far wired a nice!view to a keyboard with a pointing device, so I didn't know how their SPIs would interact, let alone what an SPI even is. 
 I added -corresponding lines- to make the nice!view work as a native shield, and as result the nice!view started malfunctioning as shown in the photo.  
-I believe this happenend because both the nice!view and trackball's irpt, sck, mosi pins were wired to the same MCU pins, and they were both set to use spi0. It seemed that whatever signals sent by the trackball interferred with the nice!view.  
-To solve this issue, I set the trackball to use spi3, wired the trackball and nice!view to different pins, and everything worked flawlessly.  
-I suspect that maybe the problem was only the two devices being wired to the same pins and using the same spi might not have affected the interference, but I was fed up with desoldering and resoldering everything at this point and wasn't willing to verify if that was the case.  
+I believe this happenend because at this point, both the nice!view and trackball's irpt, sck, mosi pins were wired to the same MCU pins, and they were both set to use spi0. It seemed that whatever signals sent by the trackball interferred with the nice!view.  
+To solve this issue, I set the trackball to use spi1, the nice!view to use spi3, wired the trackball and nice!view to different pins, and everything worked flawlessly.  
+I then tested to see if they just had to use different pins and was able to share the same spi device, but although the nice!view screen showed up normally, the trackball didn't work.  
+Maybe there might be an error on my side, but with this, I came to believe that the trackball sensor and nice!view must use both different pins and spi devices.  
 
 
 ## Final Stretch
 With the keyboard now functioning properly, I just had to get keyswitches and keycaps to finish the build.  
-I got gazzew Boba U4 keyswitches as I prefer having no noise, and I got a set of Ogre zinc alloy keycaps to further push the metal-wood aesthetics.  
+I got gazzew Boba U4 keyswitches as I prefer having no noise, and I got a set of Ogre zinc alloy keycaps to further push the metal-wood aesthetics. They feel cold to touch for the first couple minutes, but they'll warm up eventually. Sometimes they make a metallic clank sound when I type, which I think is cool.    
 The Ogre keycaps are sold in Korea for roughly $48 for 72 caps, making them far more affordable than aluminum or stainless steel keycaps. However, as zinc alloy keycaps are notoriously subseptible to discoloration, I might have to replace them after a couple months or years later.  
-<Photo>  
-I've installed the R4 keycaps upside down in row one and R2 and R3 keycaps in rows two and three, thus creating a somewhat keywell structure. It would have been better to use other keycaps, but as these were the only metal keycaps I were willing to afford, I had to make use of what I could.  
+(Photo of "pseudo-keywell")  
+I've installed the R4 keycaps upside down in row one and R2 and R3 keycaps in rows two and three, thus creating a pseudo-keywell structure. It would have been better to use other keycaps, but as these were the only metal keycaps I were willing to afford, I had to make use of what I could.  
+The pseudo-keywell had a surprisingly satisfying curvature, although the bottom row felt a bit flat. To me, it is not inferior to uniform DSA keycaps, albeit having strengths and shortcomings in different areas.  
+(Photo of captain's chair)  
+I am currently mainly using the keyboard clamped to my chair with Magsafe adapters and 141cm magic arms. It is very convenient to type, and the battery lasts about 5 days. When I don't use the keyboard, I detach both halves and place them on the magnetic alien tents as display.    
 
+Now with the keyboard finished, there are some huge flaws that must be fixed.  
+(Photo of nice!view superglued)  
+Firstly, the nice!view must have a non-destructive way to install. I just superglued mine and they work fine to me, but this is not a reliable way to manufacture a keyboard, and I will be greatly limited in means to fix them when they eventually break down.  
+Secondly, the right half resets sometimes when I detach it from the chair. I believe this is happening due to a short, but it is practically impossible to address as I did a messy job handwiring the keyboard.  
+Lastly, the trackball sensor isn't perfectly aligned to the trackball. As I fastened ufan's breakboard by modyfying VOID's pmw-3610 adapter, it is less precisely positioned than the Charybdis pmw-3610 breakboard that is always guaranteed to be in the same height and orientation. Due to this flaw, the track ball sometimes doesn't work, and I have to press on the bottom of the cover and tap it a bit to make it work properly. This can be fixed by modifying VOID's pmw-3610 adapter and bottom cover, but although I am currently working on it right now, it will take a huge amount of trial and error.  
+
+Because of the reasons listed, I do not recommend building this keyboard the way I did. Instead, I'd recommend using flexible PCBs, the Charybdis pmw-3610 breakboard, and not using nice!views for the current time. Maybe I will update the 3D files in the future, but I am mentally satisfied with what I have accomplished, and it will take a lot of motivation and learning until I muster up the will to fix them.  
