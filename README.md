@@ -1,5 +1,5 @@
 # Charybdis Nano Buildlog
-![Photo of my Charybdis Nano](https://raw.githubusercontent.com/00Lyun00/Charybdis-Nano-Buildlog/main/Images/01.jpg)  
+![Photo of my Charybdis Nano]([https://raw.githubusercontent.com/00Lyun00/Charybdis-Nano-Buildlog/main/Images/01.jpg](https://github.com/00Lyun00/Charybdis-Nano-Buildlog/blob/main/Images/01.jpg?raw=true))  
 This is my rendition of the Charybdis Nano split keyboard made by BastardKB.  
   
 Intended to be a wireless-only build, I removed the TRRS jack on both cases, added walls to support a nice!view, and made holes to fit a metal on/off switch.
