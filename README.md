@@ -1,10 +1,12 @@
 # Charybdis Nano Buildlog
 This is my rendition of the Charybdis Nano split keyboard made by [BastardKB.](https://github.com/bastardkb/charybdis)  
+  
 ![Photo of my Charybdis Nano](Images/01.jpg)  
 ![Photo of my Charybdis Nano](Images/02.jpg)  
 ![Photo of my Charybdis Nano](Images/03.jpg)  
-Intended to be a wireless-only build, I removed the TRRS jack on both cases, added walls to support a nice!view, and made holes to fit a metal on/off switch.
-I used the trackball cover mod to prevent the stainless steel ball from dropping out and causing freak accidents.
+![Photo of my Charybdis Nano](Images/04.jpg)  
+Intended to be a wireless-only build, I removed the TRRS jack on both cases, added walls to support a nice!view, and made holes to fit a metal on/off switch.  
+I used the trackball cover mod to prevent the stainless steel ball from dropping out and causing freak accidents.  
 The alien tents have two 3x6 magnets each embedded in the tall legs and one 2x6 magnet each in the short legs to attach the keyboards.   
 You can see a detailed buildlog in the Buildlog folder.  
 
