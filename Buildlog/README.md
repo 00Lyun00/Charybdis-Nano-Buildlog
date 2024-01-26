@@ -77,6 +77,7 @@ The pseudo-keywell had a surprisingly satisfying curvature, although the bottom 
 (Photo of captain's chair)  
 I am currently mainly using the keyboard clamped to my chair with Magsafe adapters and 141cm magic arms. It is very convenient to type, and the battery lasts about 5 days. When I don't use the keyboard, I detach both halves and place them on the magnetic alien tents as display.    
 
+## Limitations
 Now with the keyboard finished, there are some huge flaws that must be fixed.  
 (Photo of nice!view superglued)  
 Firstly, the nice!view must have a non-destructive way to install. I just superglued mine and they work fine to me, but this is not a reliable way to manufacture a keyboard, and I will be greatly limited in means to fix them when they eventually break down.  
