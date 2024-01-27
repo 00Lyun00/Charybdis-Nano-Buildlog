@@ -4,7 +4,7 @@
 After being inspired to build this keyboard, the first goal I wanted to achieve was using capacitive touch to automatically switch to mouse layer.  
 I knew this was possible as I saw username ufan mock up a test build with a stainless steel ball bearing in the ZMK Discord server, so I naturally decided to use one as well.  
 With the constraint of having a stainless steel trackball, I thought wood and metal would create an intriguing vintage-furniture-like design.  
-Although I learned that I didn't really need an auto-switch mouse layer and thus decided not to use capacitive touch later in the building process, liked the design theme and decided to keep it.  
+Although I learned that I didn't really need an auto-switch mouse layer and thus decided not to use capacitive touch later in the building process, I liked the design theme and decided to keep it.  
   
 Regarding functionality, I wanted it to be wireless, have a button switch to save battery, add magnets to the original tents to attach/detach them conveniently and install nice!view displays to know the pairing status and battery level.  
 I knew the first two goals were possible, but I've never seen someone using both a trackball and display on the same keyboard as pointing devices are currently experimental on ZMK.  
