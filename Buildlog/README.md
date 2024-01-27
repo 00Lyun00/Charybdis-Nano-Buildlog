@@ -1,4 +1,4 @@
-This buildlog assumes the reader has prior experience in handwiring a keyboard and will skip explaining basic facts. It is intended to help people with less experience in ZMK, as that was my case.  
+This buildlog assumes the reader has prior experience in handwiring a keyboard and will skip that part. It is intended to help people with less experience in ZMK, as that was my case.  
    
 ## Planning
 After being inspired to build this keyboard, the first goal I wanted to achieve was using capacitive touch to automatically switch to mouse layer.  
