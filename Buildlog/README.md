@@ -133,5 +133,5 @@ Lastly, the trackball sensor isn't perfectly aligned to the trackball. As I fast
 
 Because of the reasons listed, I do not recommend building this keyboard the way I did.  
 Instead, I'd recommend using flexible PCBs, the Charybdis pmw-3610 breakboard, and not using nice!views for the current time.  
-And I would also recommend buying BastardKB's Charybdis kit as it's a very nice way to get most of the materials.  
+And I would also recommend buying [BastardKB's Charybdis kit](https://bastardkb.com/charybdis) as it's a very nice way to get most of the materials.  
 Maybe I will update the 3D files in the future, but I am mentally satisfied with what I have accomplished, and it will take a lot of motivation and learning until I muster up the will to fix them.  
