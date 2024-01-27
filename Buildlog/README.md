@@ -4,10 +4,13 @@
 After being inspired to build this keyboard, the first goal I wanted to achieve was using capacitive touch to automatically switch to mouse layer.  
 I knew this was possible as I saw ufan mock up a test build with a stainless steel ball bearing in the ZMK Discord server, so I naturally decided to use one as well.  
 With the constraint of having a stainless steel trackball, I thought wood and metal would create an intriguing vintage-furniture-like design.  
+Although I learned that I didn't really need an auto-switch mouse layer and thus decided not to use capacitive touch later in the building process, liked the design theme and decided to keep it.  
   
 Regarding functionality, I wanted it to be wireless, have a button switch to save battery, add magnets to the original tents to attach/detach them conveniently and install nice!view displays to know the pairing status and battery level.  
 I knew the first two goals were possible, but I've never seen someone using both a trackball and display on the same keyboard as pointing devices are currently experimental on ZMK.  
-With these challenges in mind, I proceeded to the building process.
+With these challenges in mind, I proceeded to the building process.  
+  
+I highly recommend watching [EIGAtech's wireless Charybdis video,](https://www.youtube.com/watch?v=Mks7QDxFreY&t) as it was incredibly helpful for me to visualize my build plan.
 
 
 ## Modeling
@@ -46,7 +49,9 @@ The final product turned out a bit too bright and red than I intended, but it wa
 ## Wiring and Electronics
 ![Messy handwiring](Images/11.jpg)  
 I handwired the keyboard because I happened to have everything I needed, and I wanted to save some money. I deeply regret this decision as the inner height of the Charybdis Nano is so low that the wire and hotswap sockets could touch the floor below the metal plate and potentially cause shorts. Due to this reason, I strongly recommend using flexible PCBs if you were to build a Charybdis Nano yourself.  
-As I have little to no knowledge about electronics, and all I am doing is guesswork based on pre-existing builds. This acted as a major obstacle for handwiring this keyboard as it meant I couldn't just install the firmware and had to figure out which wires were connected to which pin on the MCU. This is another reason why you should use flexible PCBs alongside BastardKB's Elite-C holder or splinktegrated, as everything is pre-positioned. So I dug up VOID's zmk folder to find out how everything had to be wired, and I found three important files.  
+As I have little to no knowledge about electronics, and all I am doing is guesswork based on pre-existing builds. This acted as a major obstacle for handwiring this keyboard as it meant I couldn't just install the firmware and had to figure out which wires were connected to which pin on the MCU.  
+This is another reason why you should use flexible PCBs alongside [BastardKB's Elite-C holder](https://github.com/Bastardkb/Elite-C-holder?tab=readme-ov-file), as everything is pre-positioned.  
+So I dug up EIGAtech's [zmk folder](https://github.com/eigatech/zmk-config/tree/charybdis) to find out how everything had to be wired, and I found three important files.  
 
 ![row2col and row pins](Images/18.jpg)  
   
