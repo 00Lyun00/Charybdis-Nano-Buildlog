@@ -16,7 +16,7 @@ You can see a detailed buildlog in the Buildlog folder.
 - Switches: Gazzew Boba U4
 - Keycaps: Ogre Zinc Alloy OEM Keycaps (Korean Local Seller)
 - Plates: Laserboost Galvanized Steel Plates
-- Chair Attachment: Ulanzi R094 Magic Arm & Clamp + Magsafe Adapters
+- Chair Attachment: Ulanzi R094 Magic Arm & Clamp + MagSafe Adapters
   
 ## Electronics    
 - MCU: nice!nano 2.0
