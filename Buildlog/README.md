@@ -6,7 +6,7 @@ I knew this was possible as I saw username ufan mock up a test build with a stai
 With the constraint of having a stainless steel trackball, I thought wood and metal would create an intriguing vintage-furniture-like design.  
 Although I learned that I didn't really need an auto-switch mouse layer and thus decided not to use capacitive touch later in the building process, I liked the design theme and decided to keep it.  
   
-Regarding functionality, I wanted it to be wireless, have a button switch to save battery, add magnets to the original tents to attach/detach them conveniently and install nice!view displays to know the pairing status and battery level.  
+Regarding functionality, I wanted to make it wireless, add a button switch to save battery, add magnets to the original tents to attach/detach them conveniently, and install nice!view displays to know the pairing status and battery level.  
 I knew the first three goals were achievable, but I've never seen someone using both a trackball and display on the same keyboard as pointing devices are currently experimental on ZMK.  
 With these challenges in mind, I proceeded to the building process.  
   
