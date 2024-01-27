@@ -64,7 +64,7 @@ This applies to all the pins with some exceptions, so you should keep that in mi
   
 ![column pins](Images/19.jpg)  
   
-charybdis_left.overlay : Here I found column-gpios. This told me where to wire the columns.  
+charybdis_left.overlay : Here I found col-gpios. This told me where to wire the columns.  
 One small issue I had was that this config was written for the 3x6 Charybdis Mini, but I was making a 3x5 Charybdis Nano.  
 So there was one excess column pin that wasn't used on my keyboard, and I didn't know which one it was.  
 To solve this problem, I just wired column 2 and tested which column it was on the keyboard to find out whether column 1 or 6 was unused.  
