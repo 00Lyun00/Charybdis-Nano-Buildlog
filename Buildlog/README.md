@@ -76,7 +76,7 @@ charybdis_right.overlay : Here I found &pinctrl and &spi1. This showed me which 
 
 Now I just had to learn how to add a nice!view to the keyboard, so I searched online to find ZMK folders that had nice!view added to their keyboards.  
   
-![niceview charybdis.conf](Images/21.png)  
+![niceview charybdis.conf](Images/25.jpg)  
   
 In charybdis.conf, you have to add CONFIG_ZMK_DISPLAY=y and CONFIG_SSD1306=n as seen in the screenshot above.  
   
