@@ -13,11 +13,10 @@ With these challenges in mind, I proceeded to the building process.
 ## Modeling
 ![Three-quarter view of modified case](Images/16.jpg)  
 I have practically no knowledge in Fusion360, but as the changes I was about to make were minimal, it fortunately didn't deter the process too much.  
-Firstly, I just simply added two holes on the side for the button switch and covered up the TRRS hole on the case. I also changed the MCU holder for handwiring so that it didn't hold the TRRS conenector, grabbed on millmax hotswap sockets, and used a 3x6 button switch. 
-(tent 3d model)
-For the tents, I just had to make some holes, and for the keyboard cases, I just had to make a hole for the button switch and a holder for the nice!view.  
-Everything except for the nice!view part was easy, as there was nothing to hold the nice!view.  
-So I followed BastardKB's original Charybdis design video(put link) to make some walls on the side the exact way he did, and then I made a rectangular hole big enough to fit the nice!view flush.  
+Firstly, I just simply added two holes on the side for the button switch and covered up the TRRS hole.  
+I also changed the MCU holder for handwiring so that it didn't hold the TRRS conenector, grabbed on millmax hotswap sockets, and used a 3x6 button switch since that's what I had in stock.    
+Everything except for the nice!view part was easy, as there was nothing to hold the nice!view to begin with.  
+So I followed [BastardKB's keyboard design video](https://youtu.be/scoX8NZv4MI?si=uietOpE2jdQoaGku&t=1031) to make some walls on the side the exact way he did, and then I made a rectangular hole big enough to fit the nice!view flush.  
 ![Multiple nice!view hole variations that show my inexpertise](Images/14.jpg)  
 If I was better in using Fusion360, I would have added a latch or any other mechanism to hold the nice!view in place.  
 However, as I was limited by the fact that I don't know what I am doing, I simply stopped and decided to glue it in place.  
@@ -46,7 +45,7 @@ The final product turned out a bit too bright and red than I intended, but it wa
 
 ## Wiring and Electronics
 ![Messy handwiring](Images/11.jpg)  
-I hand-wired the keyboard because I happened to have everything I needed, and I wanted to save some money. I deeply regret this decision as the inner height of the Charybdis Nano is so low that the wire could touch the metal plate and potentially cause shorts. Due to this reason, I strongly recommend using flexible PCBs if you were to build a Charybdis Nano yourself.  
+I hand-wired the keyboard because I happened to have everything I needed, and I wanted to save some money. I deeply regret this decision as the inner height of the Charybdis Nano is so low that the wire and hotswap sockets could touch the floor below the metal plate and potentially cause shorts. Due to this reason, I strongly recommend using flexible PCBs if you were to build a Charybdis Nano yourself.  
 As I have little to no knowledge about electronics, and all I am doing is guesswork based on pre-existing builds. This acted as a major obstacle for handwiring this keyboard as it meant I couldn't just install the firmware and had to figure out which wires were connected to which pin on the MCU. This is another reason why you should use flexible PCBs alongside BastardKB's Elite-C holder or splinktegrated, as everything is pre-positioned. So I dug up VOID's zmk folder to find out how everything had to be wired, and I found three important files.  
 
 ![row2col and row pins](Images/18.jpg)  
@@ -55,6 +54,7 @@ charybdis.dsti : Here, I found row2col and row-gpios.
 row2col means electricity flowed from rows to columns for keyboard scanning.  
 It is very important to know this detail, as this indicates which direction we must wire the diodes so that we ensure the electricity doesn't flow the opposite way.  
 row-gpios showed which pins were assigned to each row, so I just had to wire it accordingly.  
+And also, I can also change the pins I want to assign by changing the pin numbers written in each section.  
   
 ![column pins](Images/19.jpg)  
   
@@ -68,6 +68,24 @@ To solve this problem, I just wired column 2 and tested which column it was to f
 charybdis_right.overlay : Here I found &pinctrl. This showed me which pins were assigned for the trackball sensor.  
 
 Now I just had to learn how to add a nice!view to the keyboard, so I searched online to find ZMK folders that had nice!view added to their keyboards.  
+  
+![niceview charybdis.conf](Images/21.jpg)  
+  
+In charybdis.conf, you have to add CONFIG_ZMK_DISPLAY=y and CONFIG_SSD1306=n as seen in the screenshot above.  
+  
+![niceview charybdis.dtsi](Images/22.jpg)  
+  
+In charybdis.dtsi, you have to add the entire &pinctrl section as seen in the screenshot above.  
+  
+![niceview charybdis.zmk.yml](Images/23.jpg)  
+  
+In charybdis.zmk.yml, you have to add - display in the features section.  
+  
+![niceview charybdis.zmk.yml](Images/24.jpg)  
+
+And most importantly, in build.yami, you have to add nice_view behind both shield: charybdis_left and shield: charybdis_right as seen above.  
+I am not sure if you have to do all of these changes, but they are what I did to make the nice!view work on my keyboard.    
+I hope it is clear that you can change all of the file names from charybdis to whatever keyboard you want to add the nice!view to.  
   
 ![My pinout](Images/21.png)  
 With all the info I needed to handwire a keyboard, I came up with this pinout.  
@@ -102,9 +120,10 @@ I am currently mainly using the keyboard clamped to my chair with Magsafe adapte
 ## Limitations
 Now with the keyboard finished, there are some huge flaws that must be fixed.  
 ![nice!view hotglued in place](Images/06.jpg)    
-Firstly, the nice!view must have a non-destructive way to install. I just hotglued mine and they work fine to me, but this is not a reliable way to manufacture a keyboard, and I will be greatly limited in means to fix them when they eventually break down.  
-Secondly, the right half resets sometimes when I detach it from the chair. I believe this is happening due to a short, but it is practically impossible to address as I did a messy job handwiring the keyboard.  
-Thirdly, my ZMK firmware is outdated. Whenever I turn off the keyboards, the peripheral left half loses connection to the right half and fails pairing. This is fixed by changing the config file a bit, but it in turns drains the left half's battery extremely fast, so it also only lasts about 5 days and not the expected one month. I can actually fix this easily by using the most recent ZMK pointer branch, so it isn't as critical as the other flaws. 
+1. The nice!view must have a non-destructive way to install. I just hotglued mine and they work fine to me, but this is not a reliable way to manufacture a keyboard, and I will be greatly limited in means to fix them when they eventually break down.  
+2. The right half resets sometimes when I detach it from the chair. I believe this is happening due to a short, but it is practically impossible to address as I did a messy job handwiring the keyboard.  
+3. My ZMK firmware is outdated. Whenever I turn off the keyboards, the peripheral left half loses connection to the right half and fails pairing. This is fixed by changing the config file a bit, but it in turns drains the left half's battery extremely fast, so it also only lasts about 5 days and not the expected one month. I can actually fix this easily by using the most recent ZMK pointer branch, so it isn't as critical as the other flaws. 
+4. I am using a 3x6 Charybdis Mini firmware instead of a 3x5 Charybdis Nano firmware. Although it is functioning perfectly, I am basically using a 3x6 keymap with all of the outer column keys left blank. It is a bit of a hassle to work with, and it would be much more nice to just set it as a 3x5 keymap in the first place.  
 Lastly, the trackball sensor isn't perfectly aligned to the trackball. As I fastened ufan's breakboard by modyfying VOID's pmw-3610 adapter, it is less precisely positioned than the Charybdis pmw-3610 breakboard that is always guaranteed to be in the same height and orientation. Due to this flaw, the track ball sometimes doesn't work, and I have to press on the bottom of the cover and tap it a bit to make it work properly. This can be fixed by modifying VOID's pmw-3610 adapter and bottom cover, but although I am currently working on it right now, it will take a huge amount of trial and error.  
 
 Because of the reasons listed, I do not recommend building this keyboard the way I did.  
