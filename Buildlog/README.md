@@ -69,7 +69,7 @@ charybdis_right.overlay : Here I found &pinctrl. This showed me which pins were 
 
 Now I just had to learn how to add a nice!view to the keyboard, so I searched online to find ZMK folders that had nice!view added to their keyboards.  
   
-![My pinout](Images/cnano niceview pinout.jpg)  
+![My pinout](Images/21.png)  
 With all the info I needed to handwire a keyboard, I came up with this pinout.  
 The trackball/nice!view SCK/MOSI/CS/IRQ pins each can be interchanged with their corresponding positions.  
 Although I ended up with this seemengly random placement, I believe only the VCC and RST pins must be wired at the same spot and would rather recommend organizing it to be more easily comprehensible. But keep in mind that it is preferred to use high-freuquency pins for the nice!view and trackball sensor.  
