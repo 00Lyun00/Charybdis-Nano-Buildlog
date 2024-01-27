@@ -24,6 +24,11 @@ So I followed [BastardKB's keyboard design video](https://youtu.be/scoX8NZv4MI?s
 If I was better in using Fusion360, I would have added a latch or any other mechanism to hold the nice!view in place.  
 However, as I was limited by the fact that I don't know what I am doing, I simply stopped and decided to glue it in place.  
   
+![Flaw of Skeletyl file](Images/26.jpg)  
+  
+The wall on the Skeletyl file is flawed because it sticks out a bit.  
+I lacked the ability to fix this, so I just sanded it down after printing it until that bump disappeared.  
+  
 ![Alien tent modeling file](Images/17.jpg)  
 I also added four holes to the alien tent to hold 6cm magnets.  
 The front legs were tall enough to fit two 3x6 magnets, and the back legs only managed to fit one 2x6 magnet each.  
