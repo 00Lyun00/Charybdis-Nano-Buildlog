@@ -57,7 +57,7 @@ So I dug up EIGAtech's [zmk config](https://github.com/eigatech/zmk-config/tree/
   
 charybdis.dsti : Here, I found row2col and row-gpios. 
 row2col means electricity flowed from rows to columns for keyboard scanning.  
-It is very important to know this detail, as this indicates which direction we must wire the diodes so that we ensure the electricity doesn't flow the opposite way.  
+It is very important to know this detail, as this indicates which direction we must wire the diodes so that we ensure electricity doesn't flow the opposite way.  
 row-gpios showed which pins were assigned to each row, so I just had to wire it accordingly.  
 And also, I can also change the pins I want to assign by changing the pin numbers written in each section.  
   
