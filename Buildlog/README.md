@@ -2,7 +2,7 @@
    
 ## Planning
 After being inspired to build this keyboard, the first goal I wanted to achieve was using capacitive touch to automatically switch to mouse layer.  
-I knew this was possible as I saw ufan mock up a test build with a stainless steel ball bearing in the ZMK Discord server, so I naturally decided to use one as well.  
+I knew this was possible as I saw username ufan mock up a test build with a stainless steel ball bearing in the ZMK Discord server, so I naturally decided to use one as well.  
 With the constraint of having a stainless steel trackball, I thought wood and metal would create an intriguing vintage-furniture-like design.  
 Although I learned that I didn't really need an auto-switch mouse layer and thus decided not to use capacitive touch later in the building process, liked the design theme and decided to keep it.  
   
