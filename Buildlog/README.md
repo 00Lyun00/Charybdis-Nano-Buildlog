@@ -50,17 +50,24 @@ I hand-wired the keyboard because I happened to have everything I needed, and I 
 As I have little to no knowledge about electronics, and all I am doing is guesswork based on pre-existing builds. This acted as a major obstacle for handwiring this keyboard as it meant I couldn't just install the firmware and had to figure out which wires were connected to which pin on the MCU. This is another reason why you should use flexible PCBs alongside BastardKB's Elite-C holder or splinktegrated, as everything is pre-positioned. So I dug up VOID's zmk folder to find out how everything had to be wired, and I found three important files.  
 
 ![row2col and row pins](Images/18.jpg)  
+  
 charybdis.dsti : Here, I found row2col and row-gpios. 
-row2col means electricity flowed from rows to columns for keyboard scanning. It is very important to know this detail, as this indicates which direction we must wire the diodes so that we ensure the electricity doesn't flow the opposite way.  
+row2col means electricity flowed from rows to columns for keyboard scanning.  
+It is very important to know this detail, as this indicates which direction we must wire the diodes so that we ensure the electricity doesn't flow the opposite way.  
 row-gpios showed which pins were assigned to each row, so I just had to wire it accordingly.  
-
+  
 ![column pins](Images/19.jpg)  
+  
 charybdis_left.overlay : Here I found column-gpios. This told me where to wire the columns.  
-One small issue I had was that this config was written for the 4x6 Charybdis, but I was making a 3x5 Charybdis Nano. So there was one excess column pin that wasn't used on my keyboard, and I didn't know which one it was.  
+One small issue I had was that this config was written for the 4x6 Charybdis, but I was making a 3x5 Charybdis Nano.  
+So there was one excess column pin that wasn't used on my keyboard, and I didn't know which one it was.  
 To solve this problem, I just wired column 2 and tested which column it was to find ou whether column 1 or 6 was unused. It was column 1, so I just didn't wire anything to it.  
   
 ![trackball pins](Images/20.jpg)  
+  
 charybdis_right.overlay : Here I found &pinctrl. This showed me which pins were assigned for the trackball sensor.  
+
+Now I just had to learn how to add a nice!view to the keyboard, so I searched online to find ZMK folders that had nice!view added to their keyboards.  
   
 ![My pinout](Images/cnano niceview pinout.jpg)  
 With all the info I needed to handwire a keyboard, I came up with this pinout.  
