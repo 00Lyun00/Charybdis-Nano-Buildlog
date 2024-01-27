@@ -6,8 +6,9 @@ This is my rendition of the Charybdis Nano split keyboard made by [BastardKB.](h
 ![Photo of my Charybdis Nano](Buildlog/Images/03.jpg)  
   
 Intended to be a wireless-only build, I removed the TRRS jack on both cases, added walls to support a nice!view, and made holes to fit a metal on/off switch.  
-I used the trackball cover mod to prevent the stainless steel ball from dropping out.  
-The alien tents have magnets imbedded, making it easier to attach and detach the keyboards.   
+I used the trackball cover mod to prevent the stainless steel ball from dropping out when I take it off the tent or MagSafe adapter.    
+The alien tents have magnets imbedded, making it easier to attach and detach the keyboards.  
+With 110mah batteries, I can use the fully charged keyboard for about 5 days before recharging.  
 You can see a detailed buildlog in the Buildlog folder.  
 
 ## Materials
