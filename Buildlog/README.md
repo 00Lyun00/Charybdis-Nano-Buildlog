@@ -46,16 +46,26 @@ The final product turned out a bit too bright and red than I intended, but it wa
 
 ## Wiring and Electronics
 ![Messy handwiring](Images/11.jpg)  
-I hand-wired the keyboard because I already had everything I needed to build the keyboard, and I didn't feel the need to order flexible PCBs. I deeply regret this decision as the inner height of the Charybdis Nano is so low that the wire could touch the metal plate and potentially cause shorts. Due to this reason, I strongly recommend using flexible PCBs if you were to build a Charybdis Nano yourself.  
-As I have little to no knowledge about electronics, and all I am doing is guesswork based on pre-existing builds. This acted as a major obstacle for handwiring this keyboard as it meant I couldn't just install the firmware and had to figure out which wires were connected to which pin on the MCU. This is another reason why you should use flexible PCBs alongside BastardKB's Elite-C holder or splinktegrated, as everything is pre-positioned. So I dug up VOID's zmk folder to find out how everything had to be wired.  
-(photo of row2col and row pinout and such)
-Based on -insert file name-, I found three keywords: row2col, pins, and pins.  
+I hand-wired the keyboard because I happened to have everything I needed, and I wanted to save some money. I deeply regret this decision as the inner height of the Charybdis Nano is so low that the wire could touch the metal plate and potentially cause shorts. Due to this reason, I strongly recommend using flexible PCBs if you were to build a Charybdis Nano yourself.  
+As I have little to no knowledge about electronics, and all I am doing is guesswork based on pre-existing builds. This acted as a major obstacle for handwiring this keyboard as it meant I couldn't just install the firmware and had to figure out which wires were connected to which pin on the MCU. This is another reason why you should use flexible PCBs alongside BastardKB's Elite-C holder or splinktegrated, as everything is pre-positioned. So I dug up VOID's zmk folder to find out how everything had to be wired, and I found three important files.  
 
-(photo of keyboard matrix)  
-row2col : This meant electricity flowed from rows to columns for keyboard scanning. It is very important to know this detail, as this indicates which direction we must wire the diodes so that we ensure the electricity doesn't flow the other way around.  
-Both the row pins and column pins indicated told me where each row and column must be wired to, so I just had to connect the wires accordingly.  
+![row2col and row pins](Images/18.jpg)  
+charybdis.dsti : Here, I found row2col and row-gpios. 
+row2col means electricity flowed from rows to columns for keyboard scanning. It is very important to know this detail, as this indicates which direction we must wire the diodes so that we ensure the electricity doesn't flow the opposite way.  
+row-gpios showed which pins were assigned to each row, so I just had to wire it accordingly.  
+
+![column pins](Images/19.jpg)  
+charybdis_left.overlay : Here I found column-gpios. This told me where to wire the columns.  
+One small issue I had was that this config was written for the 4x6 Charybdis, but I was making a 3x5 Charybdis Nano. So there was one excess column pin that wasn't used on my keyboard, and I didn't know which one it was.  
+To solve this problem, I just wired column 2 and tested which column it was to find ou whether column 1 or 6 was unused. It was column 1, so I just didn't wire anything to it.  
+  
+![trackball pins](Images/20.jpg)  
+charybdis_right.overlay : Here I found &pinctrl. This showed me which pins were assigned for the trackball sensor.  
+  
 ![My pinout](Images/cnano niceview pinout.jpg)  
-This is my pinout, and the trackball/nice!view SCK/MOSI/CS/IRQ pins each can be interchanged with their corresponding positions. Although I ended up with this seemengly random placement, I believe only the VCC and RST pins must be wired at the same spot and would rather recommend organizing it to be more easily comprehensible. But keep in mind that it is preferred to use high-freuquency pins for the nice!view and trackball sensor.  
+With all the info I needed to handwire a keyboard, I came up with this pinout.  
+The trackball/nice!view SCK/MOSI/CS/IRQ pins each can be interchanged with their corresponding positions.  
+Although I ended up with this seemengly random placement, I believe only the VCC and RST pins must be wired at the same spot and would rather recommend organizing it to be more easily comprehensible. But keep in mind that it is preferred to use high-freuquency pins for the nice!view and trackball sensor.  
 
 ![Positioning the trackball sensor](Images/12.jpg)  
 I used ufan's original pmw-3610 breakboard opposed to the Charybdis pmw-3610 breakboard because it was smaller, and since I am forced to buy 5 of these at least when ordered from JLCPCB, I planned to use the leftover ones for different keyboard projects.  
