@@ -101,6 +101,7 @@ I hope it is clear that you can change all of the file names from charybdis to w
   
 ![My pinout](Images/21.png)  
 With all the info I needed to handwire the keyboard, I came up with this pinout.  
+Please note that column 1 isn't used for my keyboard, and it represents the sixth and outermost column you press with your pinky.  
 The trackball/nice!view SCK/MOSI/CS/IRQ pins each can be interchanged with their corresponding positions.  
 Although I ended up with this seemengly random placement, I believe only the VCC and RST pins must be wired at the same spot and would rather recommend organizing it to be more easily comprehensible. But keep in mind that it is preferred to use high-freuquency pins for the nice!view and trackball sensor.  
 
