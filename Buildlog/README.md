@@ -11,7 +11,7 @@ With these challenges in mind, I proceeded to the building process.
 
 
 ## Modeling
-(Photo of model case shot in front)  
+![Three-quarter view of modified case](Images/16.jpg)  
 I have practically no knowledge in Fusion360, but as the changes I was about to make were minimal, it fortunately didn't deter the process too much.  
 Firstly, I just simply added two holes on the side for the button switch and covered up the TRRS hole on the case. I also changed the MCU holder for handwiring so that it didn't hold the TRRS conenector, grabbed on millmax hotswap sockets, and used a 3x6 button switch. 
 (tent 3d model)
@@ -21,6 +21,11 @@ So I followed BastardKB's original Charybdis design video(put link) to make some
 ![Multiple nice!view hole variations that show my inexpertise](Images/14.jpg)  
 If I was better in using Fusion360, I would have added a latch or any other mechanism to hold the nice!view in place.  
 However, as I was limited by the fact that I don't know what I am doing, I simply stopped and decided to glue it in place.  
+  
+![Alien tent modeling file](Images/17.jpg)  
+I also added four holes to the alien tent to fit 6 inch magnets.  
+The front legs were tall enough to fit two 3x6 magnets, and the back legs only managed to fit one 2x6 magnet each.  
+I had to use the magnets this way in order to support the heavy keyboard in place without slipping.  
   
 ## Printing, Sanding, and Staining
 ![Unsanded case](Images/07.jpg)  
