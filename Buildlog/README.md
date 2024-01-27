@@ -50,7 +50,7 @@ The final product turned out a bit too bright and red than I intended, but it wa
 ![Messy handwiring](Images/11.jpg)  
 I handwired the keyboard because I happened to have everything I needed, and I wanted to save some money. I deeply regret this decision as the inner height of the Charybdis Nano is so low that the wire and hotswap sockets could touch the floor below the metal plate and potentially cause shorts. Due to this reason, I strongly recommend using flexible PCBs if you were to build a Charybdis Nano yourself.  
 As I have little to no knowledge about electronics, and all I am doing is guesswork based on pre-existing builds. This acted as a major obstacle for handwiring this keyboard as it meant I couldn't just install the firmware and had to figure out which wires were connected to which pin on the MCU.  
-This is another reason why you should use flexible PCBs alongside [BastardKB's Elite-C holder](https://github.com/Bastardkb/Elite-C-holder?tab=readme-ov-file), as everything is pre-positioned.  
+This is another reason why you should use flexible PCBs alongside [VOID's nice!nano holder]([https://github.com/Bastardkb/Elite-C-holder?tab=readme-ov-file](https://github.com/victorlucachi/Elite-C-holder), as everything is pre-positioned.  
 So I dug up EIGAtech's [zmk config](https://github.com/eigatech/zmk-config/tree/charybdis) to find out how everything had to be wired, and I found three important files.  
 
 ![row2col and row pins](Images/18.jpg)  
