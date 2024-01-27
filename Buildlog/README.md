@@ -74,7 +74,7 @@ It was column 1, so I just didn't wire anything to it.
   
 charybdis_right.overlay : Here I found &pinctrl and &spi1. This showed me which pins were assigned for the trackball sensor.  
 
-Now I just had to learn how to add a nice!view to the keyboard, so I searched online to find ZMK folders that had nice!view added to their keyboards.  
+Now I just had to learn how to add a nice!view to the keyboard, so I searched online to find ZMK configs that had nice!view added to their keyboards.  
   
 ![niceview charybdis.conf](Images/25.jpg)  
   
