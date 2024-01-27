@@ -23,7 +23,7 @@ If I was better in using Fusion360, I would have added a latch or any other mech
 However, as I was limited by the fact that I don't know what I am doing, I simply stopped and decided to glue it in place.  
   
 ![Alien tent modeling file](Images/17.jpg)  
-I also added four holes to the alien tent to fit 6 inch magnets.  
+I also added four holes to the alien tent to hold 6cm magnets.  
 The front legs were tall enough to fit two 3x6 magnets, and the back legs only managed to fit one 2x6 magnet each.  
 I had to use the magnets this way in order to support the heavy keyboard in place without slipping.  
   
