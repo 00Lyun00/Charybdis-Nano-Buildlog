@@ -25,7 +25,7 @@ However, as I was limited by the fact that I don't know what I am doing, I simpl
 ## Printing, Sanding, and Staining
 ![Unsanded case](Images/07.jpg)  
 After the modeling process was finished, I 3D printed the cases and tents with wood PLA.  
-The reason I used wood PLA was because I wanted the keyboard to feel like actual wood, and I saw some guides online that suggested sanding and staining.  
+I decided to use wood PLA was because I wanted the keyboard to feel like actual wood, and I saw some guides online that suggested sanding and staining.  
 However, I later learned that just painting regular PLA like wood was way simpler, offered much more control, and achieved better results.  
 If I were to rebuild this keyboard the same way, I think I would do that instead.  
   
