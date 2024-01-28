@@ -23,32 +23,32 @@ ZMK 디스코드에서 ufan 이라는 사용자가 스테인레스 볼 베어링
 만약 제가 퓨전을 제대로 쓸 줄 알았다면 무슨 걸쇠나 기타 지지 부품을 만들어서 nice!view가 제자리에 고정되게 만들었을 건데  
 저는 제가 뭘 하는지도 잘 모르는 상태였기 때문에 그냥 여기서 멈추고 글루건 써서 고정하기로 했습니다.    
   
-![Flaw of Skeletyl file](Images/26.jpg)  
+![스켈레틸 결함](Images/26.jpg)  
   
-The wall on the Skeletyl file is flawed because it sticks out a bit.  
-I lacked the ability to fix this, so I just sanded it down after printing it until that bump disappeared.  
+스켈레틸 케이스는 벽 부분이 위쪽으로 돌출되는 결함을 지녔습니다.  
+제 능력으로는 이걸 고칠 수가 없어서 그냥 3D프린팅을 한 뒤 사포로 갈아서 없앴습니다.  
   
-![Alien tent modeling file](Images/17.jpg)  
-I also added four holes to the alien tent to hold 6cm magnets.  
-The front legs were tall enough to fit two 3x6 magnets, and the back legs only managed to fit one 2x6 magnet each.  
-I had to use the magnets this way in order to support the heavy keyboard in place without slipping.  
+![텐트 모델링](Images/17.jpg)  
+키보드 텐트에도 지름이 6cm인 자석을 달 수 있게 구멍을 네 개 뚫었습니다.  
+앞쪽은 3x6 자석을 두 개씩 넣을 수 있을 정도로 높았고, 뒤쪽은 높이가 워낙 낮아서 2x6 자석을 하나씩만 겨우 넣을 수 있었습니다.  
+자석을 이 정도로는 써야 키보드가 미끄러지지 않고 제자리에 고정되었습니다.  
   
 ## 3D 프린팅, 사포질, 우드 스테이닝
-![Unsanded case](Images/07.jpg)  
-After the modeling process was finished, I 3D printed the cases and tents with wood PLA.  
-I decided to use wood PLA was because I wanted the keyboard to feel like actual wood, and I saw some guides online that suggested sanding and staining.  
-However, I later learned that just painting regular PLA like wood was way simpler, offered much more control, and achieved better results.  
-If I were to rebuild this keyboard the same way, I think I would do that instead.  
+![사포질이 안된 텐트](Images/07.jpg)  
+모델링 단계가 끝난 뒤 저는 우드 PLA 필라멘트를 써서 케이스와 텐트를 프린팅했습니다.  
+우드 필라멘트를 쓴 이유는 키보드를 최대한 진짜 목공예품처럼 느껴지게 하고 싶어서 그랬고, 온라인에서 찾아보니 우드 필라멘트를 사포질하고 스테이닝 하는 게 좋은 결과를 가져온다는 글을 찾았기 때문입니다.  
+허나 제작 도중에 그냥 일반 필라멘트로 뽑은 뒤 나무 느낌으로 도색하는 거가 훨씬 절차가 쉽고, 더 세세적으로 조절하기 편하며, 결과물도 더 좋다는 걸 배웠습니다.  
+만약 제가 이 키보드를 다시 만든다면 그때는 그냥 일반 필라멘트로 도색을 할 것 같습니다.  
   
-![Sanded case](Images/08.jpg)  
-I roughly sanded the printed 3D models with an 80 grit sandpaper to make it absorb the wood stain more easily.  
-I could have used 160 or 200 grit sandpaper instead, but I expected the coarse 80 grit sandpaper to shorten the sanding process and produce a more unrefined, natural look opposed to the smooth, layered surface you get 3D printing.  
-And I also tried to make the surface as smooth as possible without showing any staircase effects.  
+![사포질이 끝난 텐트](Images/08.jpg)  
+저는 80방 사포를 써서 키보드 표면을 사포질해서 우드 스테인을 더 잘 흡수할 수 있게 만들었습니다.  
+이때 160방이나 200방을 쓸 수도 있는데, 저는 80방 쓰는 게 전체 사포질 과정을 단축시키고, 원래의 미끈하고 층층이 쌓인 3D프린팅 표면보다 더 거칠고 자연스러운 나무 느낌을 내는 것을 기대했습니다.  
+또한 사포질하면서 계단현상이 안 보이게 표면을 최대한 미끈하게 만들었습니다.  
   
-![Stained case comparison](Images/09.jpg)  
-![Finished case](Images/10.jpg)  
-Once the cases and tents were ready, I stained them with two to three coats of some generic wood stain and finished the surface with a matte varnish.  
-The final product turned out a bit too bright and red than I intended, but it was acceptable so I moved on.  
+![케이스 스테이닝 전후 비교](Images/09.jpg)  
+![완성된 케이스](Images/10.jpg)  
+키보드 케이스와 텐트를 전부 사포질한 뒤, 대충 싸구려 우드 스테인으로 두 세 번 정도 코팅해서 칠하고 무광 바니쉬를 마무리로 발라줬습니다.  
+최종 결과물은 제가 원했던 것보다 너무 밝은 붉은색이 되었지만 그럭저럭 받아들일 만해서 다음 단계로 넘어갔습니다.  
 
 ## 와이어링과 펌웨어
 ![Messy handwiring](Images/11.jpg)  
