@@ -136,7 +136,7 @@ The pseudo-keywell had a surprisingly satisfying curvature, although the bottom 
 To me, it is not inferior to uniform DSA keycaps, albeit having strengths and shortcomings in different areas.  
 ![Captain's chair](Images/05.jpg)  
 I mainly use the keyboard clamped to my chair with MagSafe adapters and 141cm magic arms.  
-It is very convenient to type with, and the 100mah battery lasts about 5 days.  
+It is very convenient to type with, and the 110mah battery lasts about 5 days.  
 When I don't use the keyboard, I detach both halves and place them on the magnetic alien tents as display.    
 
 ## Limitations
