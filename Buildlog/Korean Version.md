@@ -1,28 +1,27 @@
-해당 제작기는 독자가 핸드와이어링으로 키보드를 만든 적이 있음을 상정하고 해당 부분은 건너뛰었습니다. 이는 작성자가 ZMK로 키보드를 빌드한 경험이 없어서 헤멘 경험을 바탕으로 같은 조건에 있는 사람들을 돕기 위해 작성되었습니다.  
+해당 제작기는 독자가 핸드와이어링으로 키보드를 만든 적이 있음을 상정하고 해당 부분은 건너뛰었습니다. 전체 내용은 작성자가 ZMK로 키보드를 빌드한 경험이 없어서 헤멘 경험을 바탕으로 같은 조건에 있는 사람들을 돕기 위해 작성되었습니다.  
    
-## Planning
-After being inspired to build this keyboard, the first goal I wanted to achieve was using capacitive touch to automatically switch to mouse layer.  
-I knew this was possible as I saw username ufan mock up a test build with a stainless steel ball bearing in the ZMK Discord server, so I naturally decided to use one as well.  
-With the constraint of having a stainless steel trackball, I thought wood and metal would create an intriguing vintage-furniture-like design.  
-Although I learned that I didn't really need an auto-switch mouse layer and thus decided not to use capacitive touch later in the building process, I liked the design theme and decided to keep it.  
+## 계획하기
+이 키보드를 만들기로 결정하면서 가장 우선적으로 달성하고자 한 목표는 정전식 터치 센서를 사용해서 마우스 레이어로 자동으로 전환하게 만드는 것이었습니다.  
+ZMK 디스코드에서 ufan 이라는 사용자가 스테인레스 볼 베어링을 써서 구현한 것을 본 적이 있기 때문에 이게 가능하다는 걸 알았고, 그래서 저도 자연스럽게 스테인레스 베어링을 쓰기로 결정했습니다.  
+일단 쇠공을 트랙볼로 쓰는 게 결정되었으니, 저는 목재와 금속을 같이 쓰면 뭔가 빈티지 목공예품 느낌으로 인상적인 디자인이 나올 거 같았어요.   
+그래서 비록 제작 도중에 정전식 터치가 굳이 필요가 없다는 걸 배워서 해당 기능은 포기했으나, 디자인 방향 자체는 마음에 들어서 계속 진행하기로 했습니다.  
   
-Regarding functionality, I wanted to make it wireless, add a button switch to save battery, add magnets to the original tents to attach/detach them conveniently, and install nice!view displays to know the pairing status and battery level.  
-I knew the first three goals were achievable, but I've never seen someone using both a trackball and display on the same keyboard as pointing devices are currently experimental on ZMK.  
-With these challenges in mind, I proceeded to the building process.  
+기능 면에 있어서는 저는 키보드가 무선으로 동작하고, 버튼 스위치로 켜고 끌 수 있게 만들어서 배터리를 절약하고, 텐트에 자석을 달아서 탈부착하기 쉽게 만들며, nice!view 디스플레이를 달아서 스플릿 연결 상태와 배터리 잔량을 쉽게 알 수 있도록 만들고자 했습니다.  
+처음 세 목표는 달성이 가능하다는 걸 알았지만 제작 시점에서는 트랙볼과 디스플레이를 동시에 사용하는 사람을 본 적이 없고 ZMK에서 마우스 기능은 제한적이라서 불확실했습니다.  
+앞으로 키보드를 만들기 위해 뭘 해야 할 지 확실해지자 저는 제작 단계로 넘어갔습니다.  
   
-I highly recommend watching [EIGAtech's wireless Charybdis video,](https://www.youtube.com/watch?v=Mks7QDxFreY&t) as it was incredibly helpful for me to visualize my build plan.
+제작할 때 유튜브 채널 [EIGAtech의 무선 카리브디스 키보드 제작 영상,](https://www.youtube.com/watch?v=Mks7QDxFreY&t)이 크게 도움이 되었고, 관심이 있으신 분께서는 이를 시청하실 것을 권고합니다.  
 
-
-## Modeling
-![Three-quarter view of modified case](Images/16.jpg)  
-I have practically no knowledge in Fusion360, but as the changes I was about to make were minimal, it fortunately didn't deter the process too much.  
-Firstly, I just simply added two holes on the side for the button switch and covered up the TRRS hole.  
-I also changed the MCU holder for handwiring so that it didn't hold the TRRS conenector, grabbed on millmax hotswap sockets, and used a 3x6 button switch since that's what I had in stock.    
-Everything except for the nice!view part was easy, as there was nothing to hold the nice!view to begin with.  
-So I followed [BastardKB's keyboard design video](https://youtu.be/scoX8NZv4MI?si=uietOpE2jdQoaGku&t=1031) to make some walls on the side the exact way he did, and then I made a rectangular hole big enough to fit the nice!view flush.  
-![Multiple nice!view hole variations that show my inexpertise](Images/14.jpg)  
-If I was better in using Fusion360, I would have added a latch or any other mechanism to hold the nice!view in place.  
-However, as I was limited by the fact that I don't know what I am doing, I simply stopped and decided to glue it in place.  
+## 모델링
+![정측면 각도에서 본 수정한 모델링](Images/16.jpg)  
+저는 퓨전360 기능을 거의 모르지만 어차피 제가 수정하는 거는 매우 간단한 것들에 불과해서 제작 과정이 크게 지체되지 않았습니다.  
+처음에는 케이스 옆면에 버튼 스위치가 들어갈 구멍을 하나 뚫고, 앞면에 TRRS 커넥터가 꽂히는 구멍을 메웠습니다.  
+핸드와이어링할 때 쓰는 MCU 홀더도 모양을 좀 수정해서 TRRS 커넥터 지탱하는 부분을 없애고, 밀맥스 소켓을 꽂을 수 있게 만들고, 3x6 리셋 버튼을 쓰게 만들었습니다.  
+여기까지는 다 쉬웠는데, 이제 nice!view 를 다는 곳을 만들려 하다 보니 애초에 이걸 붙잡을 수 있는 벽 자체가 없었습니다.  
+그래서 원 제작자인 [BastardKB가 키보드 디자인 과정을 보여주는 유튜브 영상을](https://youtu.be/scoX8NZv4MI?si=uietOpE2jdQoaGku&t=1031) 참고해서 똑같은 방법으로 측면에 벽을 만들었고, 그 다음에 사각형 모양 구멍을 뚫어서 nice!view가 딱 맞게 들어가도록 만들었어요.  
+![실력부족을 보여주는 nice!view 지지대 하자품들](Images/14.jpg)  
+만약 제가 퓨전을 제대로 쓸 줄 알았다면 무슨 걸쇠나 기타 지지 부품을 만들어서 nice!view가 제자리에 고정되게 만들었을 건데  
+저는 제가 뭘 하는지도 잘 모르는 상태였기 때문에 그냥 여기서 멈추고 글루건 써서 고정하기로 했습니다.    
   
 ![Flaw of Skeletyl file](Images/26.jpg)  
   
@@ -34,7 +33,7 @@ I also added four holes to the alien tent to hold 6cm magnets.
 The front legs were tall enough to fit two 3x6 magnets, and the back legs only managed to fit one 2x6 magnet each.  
 I had to use the magnets this way in order to support the heavy keyboard in place without slipping.  
   
-## Printing, Sanding, and Staining
+## 3D 프린팅, 사포질, 우드 스테이닝
 ![Unsanded case](Images/07.jpg)  
 After the modeling process was finished, I 3D printed the cases and tents with wood PLA.  
 I decided to use wood PLA was because I wanted the keyboard to feel like actual wood, and I saw some guides online that suggested sanding and staining.  
@@ -51,7 +50,7 @@ And I also tried to make the surface as smooth as possible without showing any s
 Once the cases and tents were ready, I stained them with two to three coats of some generic wood stain and finished the surface with a matte varnish.  
 The final product turned out a bit too bright and red than I intended, but it was acceptable so I moved on.  
 
-## Wiring and Electronics
+## 와이어링과 펌웨어
 ![Messy handwiring](Images/11.jpg)  
 I handwired the keyboard because I happened to have everything I needed, and I wanted to save some money. I deeply regret this decision as the inner height of the Charybdis Nano is so low that the wire and hotswap sockets could touch the floor beneath the metal plate and potentially cause shorts. Due to this reason, I strongly recommend using flexible PCBs if you were to build a Charybdis Nano yourself.  
 As I have little to no knowledge about electronics, all I am doing is guesswork based on pre-existing builds. This acted as a major obstacle for handwiring this keyboard as it meant I couldn't just install the firmware and had to figure out which wires were connected to which pin on the MCU.  
@@ -121,7 +120,7 @@ I then tested to see if they just had to use different pins and was able to shar
 Maybe there might be an error on my side, but with this, I came to believe that the trackball sensor and nice!view must use both different pins and spi devices.  
 
 
-## Final Stretch
+## 마무리
 With the keyboard now functioning properly, I just had to get keyswitches and keycaps to finish the build.  
 I got Gazzew Boba U4 keyswitches as I prefer having no noise, and I got a set of Ogre zinc alloy keycaps to further push the metal-wood aesthetics.  
 They feel cold to touch for the first couple minutes, but they'll warm up eventually. Sometimes they make a metallic clank sound when I type, which I think is cool.  
@@ -136,7 +135,7 @@ I mainly use the keyboard clamped to my chair with MagSafe adapters and 141cm ma
 It is very convenient to type with, and the 100mah battery lasts about 5 days.  
 When I don't use the keyboard, I detach both halves and place them on the magnetic alien tents as display.    
 
-## Limitations
+## 한계점
 Now with the keyboard finished, there are some huge flaws that must be fixed.  
 ![nice!view hotglued in place](Images/06.jpg)    
 1. The nice!view must have a non-destructive way to install. I just hotglued mine and they work fine to me, but this is not a reliable way to manufacture a keyboard, and I will have a huge problem replacing them when they eventually break down.  
