@@ -93,7 +93,7 @@ In charybdis.dtsi, you have to add the entire &pinctrl and nice_view_spi section
   
 In charybdis.zmk.yml, you have to add - display under the features section.  
   
-![niceview charybdis.zmk.yml](Images/24.jpg)  
+![niceview build.yami](Images/24.jpg)  
 
 And most importantly, in build.yami, you have to add nice_view behind both shield: charybdis_left and shield: charybdis_right as seen above.  
 I am not sure if you have to do all of these changes, but they are what I did to make the nice!view work on my keyboard.    
@@ -103,7 +103,8 @@ I hope it is clear that you can change all of the file names from charybdis to w
 With all the info I needed to handwire the keyboard, I came up with this pinout.  
 Please note that column 1 isn't used for my keyboard, and it represents the sixth and outermost column you press with your pinky.  
 The trackball/nice!view SCK/MOSI/CS pins each can be interchanged with their corresponding positions.  
-Although I ended up with this seemengly random placement, I believe only the VCC and RST pins must be wired at the same spot and would rather recommend organizing it to be more easily comprehensible. But keep in mind that it is preferred to use high-freuquency pins for the nice!view and trackball sensor.  
+Although I ended up with this seemengly random placement, I would rather recommend organizing it to be more easily comprehensible if you were to build this keyboard yourself.  
+But keep in mind that it is preferred to use high-freuquency pins for the nice!view and trackball sensor.  
 
 ![Positioning the trackball sensor](Images/12.jpg)  
 I used [ufan's original pmw-3610 breakboard](https://github.com/ufan/pmw3610_breakout) opposed to the [Charybdis pmw-3610 breakboard](https://github.com/Bastardkb/charybdis-pmw3610-breakout) because it was smaller, and since I am forced to buy 5 of these at least when ordered from JLCPCB, I planned to use the leftover ones for different keyboard projects.  
