@@ -108,7 +108,8 @@ But keep in mind that it is preferred to use high-freuquency pins for the nice!v
 
 ![Positioning the trackball sensor](Images/12.jpg)  
 I used [ufan's original pmw-3610 breakboard](https://github.com/ufan/pmw3610_breakout) opposed to the [Charybdis pmw-3610 breakboard](https://github.com/Bastardkb/charybdis-pmw3610-breakout) because it was smaller, and since I am forced to buy 5 of these at least when ordered from JLCPCB, I planned to use the leftover ones for different keyboard projects.  
-However, this meant the pmw-3610 doesn't have a way to be positioned correctly, so I had to change VOID's trackball sensor adapter to hold the pmw-3610 in place. I have failed in fine-tuning the position, and I worked around this problem by adjusting how tightly the bottom screws are turned.   
+However, this meant the pmw-3610 doesn't have a way to be positioned correctly, so I had to change VOID's trackball sensor adapter to hold the pmw-3610 in place.  
+I have failed in fine-tuning the position, and I worked around this problem by adjusting how tightly the bottom screws are turned.   
 The trackball position must be in the exact configuration shown in the photo to work with my settings, and I strongly recommend using the Charybdis breakboard as it is very finicky to work with and hard to callibrate.  
 
 ![nice!view malfunctioning](Images/15.jpg)  
