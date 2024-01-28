@@ -16,7 +16,7 @@ I highly recommend watching [EIGAtech's wireless Charybdis video,](https://www.y
 ## Modeling
 ![Three-quarter view of modified case](Images/16.jpg)  
 I have practically no knowledge in Fusion360, but as the changes I was about to make were minimal, it fortunately didn't deter the process too much.  
-Firstly, I just simply added two holes on the side for the button switch and covered up the TRRS hole.  
+Firstly, I just simply added a hole on the side for the button switch and covered up the TRRS hole.  
 I also changed the MCU holder for handwiring so that it didn't hold the TRRS conenector, grabbed on millmax hotswap sockets, and used a 3x6 button switch since that's what I had in stock.    
 Everything except for the nice!view part was easy, as there was nothing to hold the nice!view to begin with.  
 So I followed [BastardKB's keyboard design video](https://youtu.be/scoX8NZv4MI?si=uietOpE2jdQoaGku&t=1031) to make some walls on the side the exact way he did, and then I made a rectangular hole big enough to fit the nice!view flush.  
