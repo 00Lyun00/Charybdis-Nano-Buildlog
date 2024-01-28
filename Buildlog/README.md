@@ -35,13 +35,13 @@ The front legs were tall enough to fit two 3x6 magnets, and the back legs only m
 I had to use the magnets this way in order to support the heavy keyboard in place without slipping.  
   
 ## Printing, Sanding, and Staining
-![Unsanded case](Images/07.jpg)  
+![Unsanded tent](Images/07.jpg)  
 After the modeling process was finished, I 3D printed the cases and tents with wood PLA.  
 I decided to use wood PLA was because I wanted the keyboard to feel like actual wood, and I saw some guides online that suggested sanding and staining.  
 However, I later learned that just painting regular PLA like wood was way simpler, offered much more control, and achieved better results.  
 If I were to rebuild this keyboard the same way, I think I would do that instead.  
   
-![Sanded case](Images/08.jpg)  
+![Sanded tent](Images/08.jpg)  
 I roughly sanded the printed 3D models with an 80 grit sandpaper to make it absorb the wood stain more easily.  
 I could have used 160 or 200 grit sandpaper instead, but I expected the coarse 80 grit sandpaper to shorten the sanding process and produce a more unrefined, natural look opposed to the smooth, layered surface you get 3D printing.  
 And I also tried to make the surface as smooth as possible without showing any staircase effects.  
