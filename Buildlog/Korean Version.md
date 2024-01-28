@@ -105,12 +105,13 @@ charybdis.zmk.yml 에는 features 라고 쓰인 거 밑에 - display 라고 추�
 비록 제 핀아웃은 엄청 조잡하게 완성되었지만, 만약 이걸 직접 만들 거라면 좀 정리해서 더 깔끔하게 만드는 것을 권고합니다.  
 다만 nice!view 랑 트랙볼 센서는 원할히 작동하기 위해 high-freuquency 핀을 써서 연결하는 게 좋습니다.  
 
-![Positioning the trackball sensor](Images/12.jpg)  
-I used [ufan's original pmw-3610 breakboard](https://github.com/ufan/pmw3610_breakout) opposed to the [Charybdis pmw-3610 breakboard](https://github.com/Bastardkb/charybdis-pmw3610-breakout) because it was smaller, and since I am forced to buy 5 of these at least when ordered from JLCPCB, I planned to use the leftover ones for different keyboard projects.  
-However, this meant the pmw-3610 doesn't have a way to be positioned correctly, so I had to change VOID's trackball sensor adapter to hold the pmw-3610 in place. I have failed in fine-tuning the position, and I worked around this problem by adjusting how tightly the bottom screws are turned.   
-The trackball position must be in the exact configuration shown in the photo to work with my settings, and I strongly recommend using the Charybdis breakboard as it is very finicky to work with and hard to callibrate.  
+![트랙볼 센서 위치 조정](Images/12.jpg)  
+트랙볼 센서로 저는 [카리브디스용 pmw-3610 보드](https://github.com/Bastardkb/charybdis-pmw3610-breakout) 대신에 [ufan의 원조 pmw-3610 보드를](https://github.com/ufan/pmw3610_breakout) 썼는데, 그 이유는 이게 더 작고, 어차피 JLCPCB에서 최소 주문량인 5개를 주문해야 하니까 나머지 보드를 써서 다른 키보드를 만들고자 했기 때문입니다.  
+하지만 이러면 pmw-3610 센서를 정확한 위치에 고정할 방법이 사라지기 때문에 저는 VOID가 만든 트랙볼 센서 어댑터 파일을 개조해서 pmw-3610 센서를 제자리에 고정할 수 있게 만들었습니다.  
+결론적으로는 저는 센서 위치를 완벽하게 맞추는 거는 실패했고, 트랙볼 센서 고정 나사를 대충 조금씩 조이는 방식으로 떼웠습니다.  
+제 설정대로 트랙볼을 정상적으로 쓰려면 센서는 반드시 위에 보이는 대로 고정되어야 하며, 이게 엄청 쓰기가 힘들기 때문에 그냥 카리브디스용 보드를 쓰는 걸 강력추천합니다.  
 
-![nice!view malfunctioning](Images/15.jpg)  
+![nice!view 오작동](Images/15.jpg)  
 
 As far as I know, nobody wired a nice!view to a keyboard with a pointing device on ZMK, so I didn't know how their SPIs would interact, let alone what an SPI even is. 
 I first thought they could share the same spi device and wired them to the exact same pins, and the nice!view started malfunctioning as shown in the photo.  
