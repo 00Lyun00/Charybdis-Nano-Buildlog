@@ -149,6 +149,6 @@ Now with the keyboard finished, there are some huge flaws that must be fixed.
 5. The trackball sensor isn't perfectly aligned to the trackball. As I fastened ufan's breakboard by modifying VOID's pmw-3610 adapter, it is less precisely positioned than the Charybdis pmw-3610 breakboard that is always guaranteed to be in the same height and orientation. Due to this flaw, the track ball sometimes doesn't work, and I have to press on the bottom of the cover and tap it a bit to make it work properly. This can be fixed by modifying VOID's pmw-3610 adapter and the trackball sensor bottom cover, but although I am currently working on it right now, it will take a huge amount of trial and error.  
 
 Because of the reasons listed, I do not recommend building this keyboard the way I did.  
-Instead, I'd recommend using flexible PCBs, the Charybdis pmw-3610 breakboard, and not using nice!views for the current time.  
+Instead, I'd recommend using flexible PCBs, the Charybdis pmw-3610 breakboard, and [VOID's nice!nano holder](https://github.com/victorlucachi/Elite-C-holder). And I don't think you should use nice!views for the current time.  
 And I would also recommend buying [BastardKB's Charybdis kit](https://bastardkb.com/charybdis) as it's a very nice way to get most of the materials.  
 Maybe I will update the 3D files in the future, but I am mentally satisfied with what I have accomplished, and it will take a lot of motivation and learning until I muster up the will to fix them.  
