@@ -126,7 +126,7 @@ charybdis.zmk.yml 에는 features 라고 쓰인 거 밑에 - display 라고 추�
 이제 키보드는 제대로 작동하게 되었으니, 키스위치랑 키캡을 달기만 하면 제작이 끝나게 됩니다.  
 저는 시끄러운 키보드는 싫어서 Gazzew 보바 U4 저소음축을 구했고, 빈티지 가구 느낌을 더 끌어내기 위해 오우거 아연합금 메탈 키캡을 구했습니다.  
 메탈 키캡은 처음 몇 분은 차갑게 느껴지나 나중 가면 손가락 온기로 데워지고, 가끔 세게 칠 때 금속음이 나는 게 뭔가 간지가 납니다.  
-오우거 메탈키캡은 72개에 6만원 하는데, 수십 만원은 깨질 각오를 해야 하는 알루미늄이나 스테인레스 스틸 키캡보다는 훨씬 저렴합니다.  
+오우거 메탈키캡은 OEM 프로파일을 지녔고 72개에 6만원 하는데, 수십 만원은 깨질 각오를 해야 하는 알루미늄이나 스테인레스 스틸 키캡보다는 훨씬 저렴합니다.  
 허나 아연 키캡은 손가락에 있는 땀하고 기름과 반응해서 변색하기로 유명하니, 어쩌면 몇 달이나 몇 년 후에 교체해야 할 수 있습니다.  
 ![유사 키웰](Images/04.jpg)  
 얘는 OEM 키캡이라서 1번행은 R4 키캡을 거꾸로, 2번행과 3번행은 각각 R2 와 R3 키캡을 정방향으로 꽂아서 유사 키웰 구조를 만들었습니다.  
@@ -135,10 +135,10 @@ charybdis.zmk.yml 에는 features 라고 쓰인 거 밑에 - display 라고 추�
 최소한 저에게 있어서 얘는 DSA 키캡과 비교했을 때 나름의 장단점을 가지고 있을 뿐, 꿀리다고 생각하지 않습니다.  
   
 ![의자 마운트](Images/05.jpg)  
-I mainly use the keyboard clamped to my chair with MagSafe adapters and 141cm magic arms.  
-It is very convenient to type with, and the 100mah battery lasts about 5 days.  
-When I don't use the keyboard, I detach both halves and place them on the magnetic alien tents as display.    
-
+평소에 저는 맥세이프 어댑터와 141cm 카메라 매직암을 써서 키보드를 의자에 연결해서 씁니다.  
+이러면 타이핑하기 편하고, 110mah 배터리로 약 5일 정도 쓸 수 있습니다.  
+키보드를 안 쓸 때는 의자에서 탈착한 뒤 텐트에다 올려서 전시합니다.  
+  
 ## 한계점
 Now with the keyboard finished, there are some huge flaws that must be fixed.  
 ![nice!view hotglued in place](Images/06.jpg)    
