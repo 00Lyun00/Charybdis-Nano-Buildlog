@@ -15,7 +15,7 @@ You can see a detailed buildlog in the Buildlog folder.
 - Case: CooBean Wood PLA Filament, sanded, stained with generic mahogani wood stain and varnish
 - Switches: Gazzew Boba U4
 - Keycaps: Ogre Zinc Alloy OEM Keycaps (Korean Local Seller)
-- Plates: Laserboost Galvanized Steel Plates
+- Plates: Laserboost 2mm Galvanized Steel Plates
 - Chair Attachment: Ulanzi R094 Magic Arm & Clamp + MagSafe Adapters
   
 ## Electronics    
