@@ -82,7 +82,7 @@ charybdis_right.overlay : 여기서는 &pinctrl 하고 &spi1 을 찾았습니다
   
 ![niceview charybdis.conf](Images/25.jpg)  
   
-Charybdis.conf 파일에는 위에 보이는 대로 CONFIG_ZMK_DISPLAY=y and CONFIG_SSD1306=n 를 추가해야 합니다.  
+Charybdis.conf 파일에는 위에 보이는 대로 CONFIG_ZMK_DISPLAY=y, 그리고 CONFIG_SSD1306=n 를 추가해야 합니다.  
   
 ![niceview charybdis.dtsi](Images/22.jpg)  
   
