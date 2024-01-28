@@ -113,7 +113,7 @@ charybdis.zmk.yml 에는 features 라고 쓰인 거 밑에 - display 라고 추�
 
 ![nice!view 오작동](Images/15.jpg)  
 
-As far as I know, nobody wired a nice!view to a keyboard with a pointing device on ZMK, so I didn't know how their SPIs would interact, let alone what an SPI even is. 
+제가 아는 한 아무도 트랙볼이 달린 ZMK 키보드에 nice!view 를 추가한 적이 없어서, 저는 얘네들의 SPI 장치가 어떻게 상호작용할지, SPI 자체가 뭔지도 몰랐습니다. 
 I first thought they could share the same spi device and wired them to the exact same pins, and the nice!view started malfunctioning as shown in the photo.  
 This is a very stupid thing to do in hindsight, but my lack of knowledge prevented me from realizing what an idiot I was.  
 Whatever signals sent by the trackball interferred with the nice!view, and now I know they must use different pins.  
