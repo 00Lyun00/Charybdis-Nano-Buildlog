@@ -57,52 +57,53 @@ ZMK 디스코드에서 ufan 이라는 사용자가 스테인레스 볼 베어링
 그래서 만약 이 키보드를 만들 거라면 플렉서블 PCB와 함께 이미 펌웨어에 맞춰서 모든 핀이 다 제대로 설정이 된  [VOID가 만든 nice!nano 홀더를](https://github.com/victorlucachi/Elite-C-holder) 쓰는 게 좋습니다.  
 저는 어떤 핀에 와이어링을 해야 하는지 알아내기 위해 [EIGAtech 의 ZMK 펌웨어에](https://github.com/eigatech/zmk-config/tree/charybdis) 들어가서 파일을 전부 뒤져봤고, 그 결과 중요 파일 세 개를 찾았습니다.  
 
-![row2col and row pins](Images/18.jpg)  
+![row2col과 row-gpios](Images/18.jpg)  
   
-charybdis.dsti : Here, I found row2col and row-gpios. 
-row2col means electricity flowed from rows to columns for keyboard scanning.  
-It is very important to know this detail, as this indicates which direction we must wire the diodes so that we ensure electricity doesn't flow the opposite way.  
-row-gpios showed which pins were assigned to each row, so I just had to wire them accordingly.  
-And also, I don't have to stick to these pins and just change them in this file to whichever pin I like.  
-This applies to all the pins with some exceptions, so you should keep that in mind.  
+charybdis.dsti : 이 파일 내에서는 row2col 와 row-gpios 을 찾아 볼 수 있습니다. 
+row2col 은 무슨 뜻이냐면 키보드 매트릭스를 스캔할 때 전류가 행에서 출발해서 열로 나간다는 뜻입니다.  
+이는 매우 중요한 디테일인데, 전류가 어떤 방향으로 흐르는지 알아야 다이오드를 올바른 방향으로 납땜해서 전류가 반대 방향으로 안 흐르고 정상적으로 작동하게 만들 수 있습니다.  
+row-gpios 는 어떤 행이 어떤 핀에 연결되는지 보여줘서 저거에 맞게 와이어링을 하면 됩니다.  
+아니면 굳이 똑같은 핀에 고집할 필요 없이 핀 번호를 수정해서 딴 핀에 와이어링하게 만들 수도 있어요.  
+이건 일부 예외를 제외하고 모든 핀에 적용되는 사항이니 알아두는 것이 좋습니다.  
   
-![column pins](Images/19.jpg)  
+![col-gpios](Images/19.jpg)  
   
-charybdis_left.overlay : Here I found col-gpios. This told me where to wire the columns.  
-One small issue I had was that this config was written for the 3x6 Charybdis Mini, but I was making a 3x5 Charybdis Nano.  
-So there was one excess column pin that wasn't used on my keyboard, and I didn't know which one it was.  
-To solve this problem, I just wired column 2 and tested which column it was on the keyboard to find out whether column 1 or 6 was unused.  
-It was column 1, so I just didn't wire anything to it.  
+charybdis_left.overlay : 여기서는 col-gpios 를 찾아냈는데, 얘는 어떤 열을 와이어링해야 하는지 보여줘요.  
+이때 한 가지 문제가 있었는데, 이 펌웨어는 3x6 배열인 카리브디스 미니 용으로 제작되었는데 문제는 제가 만드는 건 3x5 배열인 카리브디스 나노라는 겁니다.  
+즉 이 키보드에는 제가 사용하지 않는 열이 하나 존재하나, 그게 정확히 몇번 열인지를 펌웨어만 보고서는 알 방법이 없었습니다.  
+이를 해결하기 위해 저는 일단 2번열을 핀에 연결한 다음에 눌러서 얘의 상대적인 위치를 파악했고, 그래서 키보드에 1번열이 없는 건지 6번열이 없는 건지 확인했습니다.  
+1번열이 없는 거였고, 그래서 이 핀은 아무것도 연결하지 않았어요.  
   
-![trackball pins](Images/20.jpg)  
+![트랙볼 핀](Images/20.jpg)  
   
-charybdis_right.overlay : Here I found &pinctrl and &spi1. This showed me which pins were assigned for the trackball sensor.  
+charybdis_right.overlay : 여기서는 &pinctrl 하고 &spi1 을 찾았습니다. 얘네는 트랙볼 센서를 어떻게 연결해야 하는지 알려줬어요.  
 
-Now I just had to learn how to add a nice!view to the keyboard, so I searched online to find ZMK configs that had nice!view added to their keyboards.  
+이제 키보드에 nice!view를 달기만 하면 되어서 온라인에 딴 사람들 ZMK 펌웨어를 찾아봐서 이걸 어떻게 추가하는 건지 알아봤습니다.  
   
 ![niceview charybdis.conf](Images/25.jpg)  
   
-In charybdis.conf, you have to add CONFIG_ZMK_DISPLAY=y and CONFIG_SSD1306=n as seen in the screenshot above.  
+Charybdis.conf 파일에는 위에 보이는 대로 CONFIG_ZMK_DISPLAY=y and CONFIG_SSD1306=n 를 추가해야 합니다.  
   
 ![niceview charybdis.dtsi](Images/22.jpg)  
   
-In charybdis.dtsi, you have to add the entire &pinctrl and nice_view_spi sections as seen in the screenshot above.  
+charybdis.dtsi 파일에는 &pinctrl 이랑 nice_view_spi 섹션 전체를 위에 보이는 대로 추가해야 합니다.  
   
 ![niceview charybdis.zmk.yml](Images/23.jpg)  
   
-In charybdis.zmk.yml, you have to add - display under the features section.  
+charybdis.zmk.yml 에는 features 라고 쓰인 거 밑에 - display 라고 추가해야 합니다.  
   
-![niceview charybdis.zmk.yml](Images/24.jpg)  
+![niceview build.yamy](Images/24.jpg)  
 
-And most importantly, in build.yami, you have to add nice_view behind both shield: charybdis_left and shield: charybdis_right as seen above.  
-I am not sure if you have to do all of these changes, but they are what I did to make the nice!view work on my keyboard.    
-I hope it is clear that you can change all of the file names from charybdis to whatever keyboard you want to add the nice!view to.  
+그리고 이게 가장 중요한 부분인데, build.yami 파일에는 nice_view 라는 문구를 shield: charybdis_left 하고 shield: charybdis_right 둘 다 뒤쪽에다 붙여써야 합니다.  
+요 설정들을 전부 다 해야 nice!view가 작동하는 건지 아닌지는 모르겠는데, 적어도 저는 저걸 다 한 상태에서 nice!view 가 정상 작동했습니다.  
+여기서 키보드 이름은 꼭 charybdis 일 필요가 없고 자기 키보드 이름을 쓰기만 하면 됩니다.  
   
-![My pinout](Images/21.png)  
-With all the info I needed to handwire the keyboard, I came up with this pinout.  
-Please note that column 1 isn't used for my keyboard, and it represents the sixth and outermost column you press with your pinky.  
-The trackball/nice!view SCK/MOSI/CS pins each can be interchanged with their corresponding positions.  
-Although I ended up with this seemengly random placement, I believe only the VCC and RST pins must be wired at the same spot and would rather recommend organizing it to be more easily comprehensible. But keep in mind that it is preferred to use high-freuquency pins for the nice!view and trackball sensor.  
+![핀아웃](Images/21.png)  
+이제 핸드와이어링을 하기 위한 정보를 전부 취합했으니, 저는 위에 보이는 대로 핀아웃을 구성했습니다.  
+제 키보드는 1번열을 안 쓰고, 여기서 1번열은 카리브디스 미니에서 새끼손가락으로 누르는 키보드 최외곽열이라는 점을 명심하세요.  
+트랙볼이랑 nice!view 가 쓰는 SCK/MOSI/CS 핀들은 서로 위치를 바꿀 수 있습니다.  
+비록 제 핀아웃은 엄청 조잡하게 완성되었지만, 만약 이걸 직접 만들 거라면 좀 정리해서 더 깔끔하게 만드는 것을 권고합니다.  
+다만 nice!view 랑 트랙볼 센서는 원할히 작동하기 위해 high-freuquency 핀을 써서 연결하는 게 좋습니다.  
 
 ![Positioning the trackball sensor](Images/12.jpg)  
 I used [ufan's original pmw-3610 breakboard](https://github.com/ufan/pmw3610_breakout) opposed to the [Charybdis pmw-3610 breakboard](https://github.com/Bastardkb/charybdis-pmw3610-breakout) because it was smaller, and since I am forced to buy 5 of these at least when ordered from JLCPCB, I planned to use the leftover ones for different keyboard projects.  
