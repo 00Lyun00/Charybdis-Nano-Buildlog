@@ -132,8 +132,8 @@ I've installed the R4 keycaps upside down on row one and R2 and R3 keycaps on ro
 It would have been better to use other keycaps, but as these were the only metal keycaps I was willing to afford, I had to make use of what I could.  
 The pseudo-keywell had a surprisingly satisfying curvature, although the bottom row felt a bit flat. To me, it is not inferior to uniform DSA keycaps, albeit having strengths and shortcomings in different areas.  
 ![Captain's chair](Images/05.jpg)  
-I am currently mainly using the keyboard clamped to my chair with Magsafe adapters and 141cm magic arms.  
-It is very convenient to type, and the battery lasts about 5 days.  
+I mainly use the keyboard clamped to my chair with MagSafe adapters and 141cm magic arms.  
+It is very convenient to type with, and the 100mah battery lasts about 5 days.  
 When I don't use the keyboard, I detach both halves and place them on the magnetic alien tents as display.    
 
 ## Limitations
