@@ -128,7 +128,7 @@ They feel cold to touch for the first couple minutes, but they'll warm up eventu
 The Ogre keycaps are sold in Korea for roughly $48 for 72 caps, making them far more affordable than aluminum or stainless steel keycaps.  
 However, as zinc alloy keycaps are notoriously subseptible to discoloration, I might have to replace them after a couple months or years later.  
 ![Pseudo-keywell](Images/04.jpg)  
-I've installed the R4 keycaps upside down in row one and R2 and R3 keycaps in rows two and three, thus creating a pseudo-keywell structure.  
+I've installed the R4 keycaps upside down on row one and R2 and R3 keycaps on rows two and three, thus creating a pseudo-keywell structure.  
 It would have been better to use other keycaps, but as these were the only metal keycaps I were willing to afford, I had to make use of what I could.  
 The pseudo-keywell had a surprisingly satisfying curvature, although the bottom row felt a bit flat. To me, it is not inferior to uniform DSA keycaps, albeit having strengths and shortcomings in different areas.  
 ![Captain's chair](Images/05.jpg)  
