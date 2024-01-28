@@ -22,3 +22,4 @@ You can see a detailed buildlog in the Buildlog folder.
 - MCU: nice!nano 2.0
 - Trackball Sensor: [ufan's original PMW3610 breakboard](https://github.com/ufan/pmw3610_breakout)
 - Display: nice!view  
+- ZMK Config: [My customized fork from EIGAtech's Config](https://github.com/00Lyun00/zmk-config-charybdis/tree/charybdis3.5)
