@@ -114,25 +114,27 @@ charybdis.zmk.yml 에는 features 라고 쓰인 거 밑에 - display 라고 추�
 ![nice!view 오작동](Images/15.jpg)  
 
 제가 아는 한 아무도 트랙볼이 달린 ZMK 키보드에 nice!view 를 추가한 적이 없어서, 저는 얘네들의 SPI 장치가 어떻게 상호작용할지, SPI 자체가 뭔지도 몰랐습니다. 
-I first thought they could share the same spi device and wired them to the exact same pins, and the nice!view started malfunctioning as shown in the photo.  
-This is a very stupid thing to do in hindsight, but my lack of knowledge prevented me from realizing what an idiot I was.  
-Whatever signals sent by the trackball interferred with the nice!view, and now I know they must use different pins.  
-I set the trackball to use spi1, the nice!view to use spi3, wired the trackball and nice!view to different pins, and everything worked flawlessly.  
-I then tested to see if they just had to use different pins and was able to share the same spi device, but although the nice!view screen showed up normally, the trackball didn't work.  
-Maybe there might be an error on my side, but with this, I came to believe that the trackball sensor and nice!view must use both different pins and spi devices.  
+처음에는 얘네 둘이 똑같은 SPI 장치를 쓸 수 있다고 생각해서 똑같은 핀에다 연결했고, 그렇게 연결하니까 nice!view가 위에 보이는 것처럼 오작동했습니다.  
+지금 와서 생각하면 이는 매우 멍청한 판단이었으나, 해당 분야에 저는 지식이 없다 보니 제가 얼마나 어리석었는지 알 방법이 없었습니다.  
+트랙볼에서 보내는 신호가 전부 nice!view 쪽으로 간섭을 해서 이게 문제가 된 거고, 이제는 얘네가 서로 다른 핀을 써야 한다는 걸 알았습니다.  
+저는 트랙볼이 spi1, nice!view는 spi3 를 쓰게 설정했고, 트랙볼과 nice!view를 각각 다른 핀에다 연결하니 그제서야 모든 게 정상작동했습니다.  
+이 다음에 혹시 얘네가 똑같은 SPI 장치를 쓸 수 있나 테스트하려고 둘 다 spi1을 쓰게 해봤는데, 이때는 nice!view 화면은 정상적으로 떴지만 트랙볼은 전혀 동작하지 않았습니다.  
+어쩌면 제가 뭘 잘못 한 걸 수도 있는데, 적어도 자체 테스트 결과 트랙볼 센서와 nice!view 는 서로 다른 핀과 서로 다른 SPI 장치를 써야 한다고 결론을 내렸습니다.  
 
 
 ## 마무리
-With the keyboard now functioning properly, I just had to get keyswitches and keycaps to finish the build.  
-I got Gazzew Boba U4 keyswitches as I prefer having no noise, and I got a set of Ogre zinc alloy keycaps to further push the metal-wood aesthetics.  
-They feel cold to touch for the first couple minutes, but they'll warm up eventually. Sometimes they make a metallic clank sound when I type, which I think is cool.  
-The Ogre keycaps are sold in Korea for roughly $48 for 72 caps, making them far more affordable than aluminum or stainless steel keycaps.  
-However, as zinc alloy keycaps are notoriously subseptible to discoloration, I might have to replace them after a couple months or years later.  
-![Pseudo-keywell](Images/04.jpg)  
-I've installed the R4 keycaps upside down on row one and R2 and R3 keycaps on rows two and three, thus creating a pseudo-keywell structure.  
-It would have been better to use other keycaps, but as these were the only metal keycaps I was willing to afford, I had to make use of what I could.  
-The pseudo-keywell had a surprisingly satisfying curvature, although the bottom row felt a bit flat. To me, it is not inferior to uniform DSA keycaps, albeit having strengths and shortcomings in different areas.  
-![Captain's chair](Images/05.jpg)  
+이제 키보드는 제대로 작동하게 되었으니, 키스위치랑 키캡을 달기만 하면 제작이 끝나게 됩니다.  
+저는 시끄러운 키보드는 싫어서 Gazzew 보바 U4 저소음축을 구했고, 빈티지 가구 느낌을 더 끌어내기 위해 오우거 아연합금 메탈 키캡을 구했습니다.  
+메탈 키캡은 처음 몇 분은 차갑게 느껴지나 나중 가면 손가락 온기로 데워지고, 가끔 세게 칠 때 금속음이 나는 게 뭔가 간지가 납니다.  
+오우거 메탈키캡은 72개에 6만원 하는데, 수십 만원은 깨질 각오를 해야 하는 알루미늄이나 스테인레스 스틸 키캡보다는 훨씬 저렴합니다.  
+허나 아연 키캡은 손가락에 있는 땀하고 기름과 반응해서 변색하기로 유명하니, 어쩌면 몇 달이나 몇 년 후에 교체해야 할 수 있습니다.  
+![유사 키웰](Images/04.jpg)  
+얘는 OEM 키캡이라서 1번행은 R4 키캡을 거꾸로, 2번행과 3번행은 각각 R2 와 R3 키캡을 정방향으로 꽂아서 유사 키웰 구조를 만들었습니다.  
+어쩌면 다른 키캡을 쓰는 게 나을 수 있었으나, 제가 구할 수 있는 메탈 키캡은 얘 말고 선택지가 없어서 이게 최선이었습니다.  
+유사 키웰은 예상과는 다르게 오목한 구조가 매우 쓰기 편했으나 맨 아래행은 오목하지 않고 좀 평평하다는 인상을 받았습니다.
+최소한 저에게 있어서 얘는 DSA 키캡과 비교했을 때 나름의 장단점을 가지고 있을 뿐, 꿀리다고 생각하지 않습니다.  
+  
+![의자 마운트](Images/05.jpg)  
 I mainly use the keyboard clamped to my chair with MagSafe adapters and 141cm magic arms.  
 It is very convenient to type with, and the 100mah battery lasts about 5 days.  
 When I don't use the keyboard, I detach both halves and place them on the magnetic alien tents as display.    
